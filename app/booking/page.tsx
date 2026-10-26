@@ -8,7 +8,7 @@ import { ShieldCheck, Sparkles, Clock, Calendar } from 'lucide-react';
 
 export const metadata = {
   title: 'Reservasi Janji Temu — Aruna Dental Studio',
-  description: 'Pilih layanan perawatan gigi, dokter spesialis, dan waktu kunjungan Anda. Konfirmasi demo instan.',
+  description: 'Pilih layanan perawatan gigi, dokter spesialis, dan waktu kunjungan Anda. Konfirmasi jadwal instan & reminder WhatsApp.',
 };
 
 export default async function BookingPage({

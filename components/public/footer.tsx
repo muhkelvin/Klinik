@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ShieldAlert, Clock, MapPin, Phone } from 'lucide-react';
+import { Clock, MapPin, Phone } from 'lucide-react';
 
 export function PublicFooter() {
   return (
@@ -44,7 +44,7 @@ export function PublicFooter() {
               </li>
               <li>
                 <Link href="/admin" className="hover:text-white transition-colors">
-                  Dashboard Demo Admin
+                  Portal Admin & Staf
                 </Link>
               </li>
             </ul>
@@ -76,26 +76,25 @@ export function PublicFooter() {
           <div className="space-y-3">
             <h4 className="text-xs font-semibold uppercase tracking-wider text-white flex items-center gap-1.5">
               <MapPin className="w-3.5 h-3.5 text-[#C85A32]" />
-              <span>Lokasi & Kontak Demo</span>
+              <span>Lokasi & Kontak</span>
             </h4>
             <div className="text-xs text-[#95A59B] space-y-1 leading-relaxed">
-              <p>Jl. Senopati No. 42, Kebayoran Baru, Jakarta Selatan (Alamat Fiktif)</p>
+              <p>Jl. Senopati No. 42, Kebayoran Baru, Jakarta Selatan 12190</p>
               <p className="pt-1 text-[#E5A88B]">WhatsApp: 0812-3456-7801</p>
             </div>
           </div>
         </div>
 
-        {/* Portfolio Demo Notice */}
+        {/* Security & Copyright */}
         <div className="pt-8 border-t border-[#2C3530] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#7A8A80]">
           <div className="flex items-center gap-2 text-center sm:text-left">
-            <ShieldAlert className="w-4 h-4 text-[#C85A32] shrink-0" />
             <span>
-              <strong>Pemberitahuan Demo:</strong> Aplikasi ini adalah proyek portfolio rekayasa web. Tidak menyediakan rekam medis sungguhan atau transaksi komersial.
+              Aruna Dental Studio berkomitmen menjaga standar sterilisasi medis tertinggi dan kenyamanan waktu setiap pasien.
             </span>
           </div>
 
-          <div className="text-center sm:text-right text-[11px] text-[#637067]">
-            &copy; 2026 Aruna Dental Studio · Portfolio Demo
+          <div className="text-center sm:text-right text-[11px] text-[#637067] whitespace-nowrap">
+            &copy; 2026 Aruna Dental Studio. Hak Cipta Dilindungi.
           </div>
         </div>
       </div>

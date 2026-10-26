@@ -38,7 +38,7 @@ export function LoginForm({ defaultEmail, defaultPassword }: LoginFormProps) {
       )}
 
       <div>
-        <label className="block text-xs font-medium text-[#374151]">Email Demo</label>
+        <label className="block text-xs font-medium text-[#374151]">Email Administrator</label>
         <input
           type="email"
           name="email"
@@ -49,7 +49,7 @@ export function LoginForm({ defaultEmail, defaultPassword }: LoginFormProps) {
       </div>
 
       <div>
-        <label className="block text-xs font-medium text-[#374151]">Kata Sandi Demo</label>
+        <label className="block text-xs font-medium text-[#374151]">Kata Sandi</label>
         <input
           type="password"
           name="password"
@@ -65,7 +65,7 @@ export function LoginForm({ defaultEmail, defaultPassword }: LoginFormProps) {
         className="w-full mt-2 flex justify-center items-center gap-2 py-2.5 px-4 border border-transparent rounded-lg shadow-xs text-sm font-medium text-white bg-[#C85A32] hover:bg-[#B44E28] focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-[#C85A32] transition-colors disabled:opacity-60"
       >
         <KeyRound className="w-4 h-4" />
-        <span>{isPending ? 'Memproses...' : 'Masuk Demo Admin'}</span>
+        <span>{isPending ? 'Memproses...' : 'Masuk Dashboard Admin'}</span>
       </button>
     </form>
   );

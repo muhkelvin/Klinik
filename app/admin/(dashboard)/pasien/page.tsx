@@ -19,10 +19,10 @@ export default async function AdminPasienPage({
     <div className="space-y-6">
       <div>
         <h1 className="font-serif text-2xl font-bold text-[#202522]">
-          Data Pasien Demo
+          Data Pasien
         </h1>
         <p className="text-xs text-[#6B7870] mt-0.5">
-          Kelola data calon pasien dan riwayat kunjungan. Seluruh data bersifat fiktif untuk demo portfolio.
+          Kelola direktori pasien, kontak, dan riwayat kunjungan perawatan klinik.
         </p>
       </div>
 

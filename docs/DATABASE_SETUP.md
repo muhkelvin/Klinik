@@ -1,13 +1,13 @@
-# Panduan Setup Database Supabase & Data Seed
+# Panduan Setup Database Supabase & Data Awal
 
-Dokumen ini menjelaskan langkah-langkah menyiapkan Supabase untuk **Sistem Klinik Gigi (Demo Portfolio)**.
+Dokumen ini menjelaskan langkah-langkah menyiapkan Supabase untuk **Aruna Dental Studio — Sistem Manajemen & Web Klinik Gigi**.
 
 ---
 
 ## 1. Buat Project di Supabase
 
 1. Buka [database.new](https://database.new) atau dashboard [supabase.com](https://supabase.com).
-2. Buat organisasi dan buat project baru, misalnya: `klinik-gigi-demo`.
+2. Buat organisasi dan buat project baru, misalnya: `aruna-dental-studio`.
 3. Pilih region terdekat (misal: **Singapore `ap-southeast-1`**).
 4. Catat database password yang Anda buat.
 
@@ -30,7 +30,7 @@ Skema ini membuat:
 
 ---
 
-## 3. Jalankan Seed Data Dummy
+## 3. Jalankan Seed Data Awal
 
 1. Di **SQL Editor** Supabase, buat query baru (**New Query**).
 2. Buka file [seed.sql](file:///c:/Users/Admin/Documents/Project/klinik/supabase/seed.sql), salin seluruh isinya, dan tempel ke SQL Editor.
@@ -38,15 +38,15 @@ Skema ini membuat:
 4. Pastikan query berhasil dieksekusi.
 
 Seed ini memasukkan:
-- **3 Dokter Fiktif** (Spesialis Ortodonti, Dokter Gigi Umum, Spesialis Konservasi Gigi) beserta jam praktiknya.
-- **8 Treatment Fiktif** (Konsultasi, Scaling, Behel Metal, Behel Sapphire, Clear Aligner, Tambal Estetik, dsb).
-- **40 Pasien Fiktif** dengan nomor WhatsApp wajar terformat Indonesia.
-- **130+ Appointment Deterministik** mencakup histori 30 hari ke belakang, slot hari ini, dan jadwal 7 hari ke depan.
-- **Status appointment realistis:** ~75% selesai, ~10% tidak datang (no-show), ~8% batal, dan appointment terjadwal hari ini & esok hari.
-- **Patient Treatments** (data kontrol aktif & kasus overdue untuk demo alur kontrol).
-- **Simulasi Reminders** (antre, terkirim_simulasi, dibatalkan).
+- **3 Dokter Praktik** (Spesialis Ortodonti, Dokter Gigi Umum, Spesialis Konservasi Gigi) beserta jam praktiknya.
+- **8 Layanan Treatment** (Konsultasi, Scaling, Behel Metal, Behel Sapphire, Clear Aligner, Tambal Estetik, dsb).
+- **40 Pasien Terdaftar** dengan nomor WhatsApp wajar terformat Indonesia.
+- **130+ Appointment Terjadwal** mencakup histori 30 hari ke belakang, slot hari ini, dan jadwal 7 hari ke depan.
+- **Status appointment:** selesai, no-show, batal, dan appointment terjadwal hari ini & esok hari.
+- **Patient Treatments** (data kontrol aktif & kasus jatuh tempo untuk alur kontrol).
+- **Reminders WhatsApp** (antre, terkirim, dibatalkan).
 
-> **Catatan:** Script `seed.sql` bersifat idempoten (`TRUNCATE ... CASCADE`). Anda dapat menjalankannya ulang kapan saja untuk me-reset data demo ke kondisi awal presentasi!
+> **Catatan:** Script `seed.sql` bersifat idempoten (`TRUNCATE ... CASCADE`). Anda dapat menjalankannya ulang kapan saja untuk menyinkronkan kembali basis data!
 
 ---
 
@@ -64,17 +64,17 @@ NEXT_PUBLIC_SUPABASE_URL=https://xxxxxxxxxxxx.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJh...
 SUPABASE_SERVICE_ROLE_KEY=eyJh...
 
-# Akun Admin Demo
-ADMIN_EMAIL=admin@klinikdemo.com
-ADMIN_PASSWORD=klinikdemo2026
+# Akun Admin
+ADMIN_EMAIL=admin@arunadental.com
+ADMIN_PASSWORD=arunadental2026
 
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
 ```
 
 ---
 
-## 5. Prosedur Reset Data Demo Kapan Saja
+## 5. Prosedur Sinkronisasi Data Kapan Saja
 
-Untuk mengembalikan data ke kondisi bersih saat presentasi:
+Untuk mengembalikan data ke kondisi bersih:
 1. **Opsi 1 (SQL Editor):** Jalankan ulang file [seed.sql](file:///c:/Users/Admin/Documents/Project/klinik/supabase/seed.sql) di Supabase SQL Editor.
-2. **Opsi 2 (Dashboard Admin):** Melalui tombol **"Reset Data Demo"** di dashboard admin demo (yang dilindungi kredensial admin).
+2. **Opsi 2 (Dashboard Admin):** Melalui tombol **"Sinkronkan Data"** di dashboard admin.

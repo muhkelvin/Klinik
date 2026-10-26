@@ -44,7 +44,7 @@ export async function submitPublicBooking(
   }
 
   if (!demoConsent) {
-    return { error: 'Anda harus menyetujui penggunaan data fiktif untuk keperluan demo.' };
+    return { error: 'Mohon centang persetujuan konfirmasi jadwal untuk melanjutkan.' };
   }
 
   if (!isValidIndonesianPhone(whatsapp)) {

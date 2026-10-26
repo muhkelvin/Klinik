@@ -27,7 +27,7 @@ export default function BehelPage() {
       name: 'Behel Metal Konvensional',
       tag: 'Kuat & Teruji',
       desc: 'Pilihan populer dan ekonomis untuk perbaikan susunan gigi dari tingkat ringan hingga kompleks.',
-      price: 'Rp 6.500.000 - Rp 9.000.000 (Ilustrasi Demo)',
+      price: 'Rp 6.500.000 - Rp 9.000.000',
       interval: 'Kontrol berkala setiap 3-4 minggu',
       treatmentId: '22222222-2222-2222-2222-222222222203',
     },
@@ -35,7 +35,7 @@ export default function BehelPage() {
       name: 'Behel Sapphire Estetik',
       tag: 'Transparan & Elegan',
       desc: 'Bracket berbahan kristal safir monokristalin yang jernih dan menyatu alami dengan warna gigi Anda.',
-      price: 'Rp 10.000.000 - Rp 14.000.000 (Ilustrasi Demo)',
+      price: 'Rp 10.000.000 - Rp 14.000.000',
       interval: 'Kontrol berkala setiap 4 minggu',
       treatmentId: '22222222-2222-2222-2222-222222222204',
     },
@@ -43,7 +43,7 @@ export default function BehelPage() {
       name: 'Clear Aligner Invisible',
       tag: 'Lepas-Pasang & Nyaman',
       desc: 'Plastik transparan medis berpresisi tinggi yang dapat dilepas saat makan dan menyikat gigi.',
-      price: 'Rp 16.000.000 - Rp 25.000.000 (Ilustrasi Demo)',
+      price: 'Rp 16.000.000 - Rp 25.000.000',
       interval: 'Evaluasi cetakan baru setiap 6-8 minggu',
       treatmentId: '22222222-2222-2222-2222-222222222205',
     },
@@ -180,7 +180,7 @@ export default function BehelPage() {
           <div className="p-3.5 bg-[#FAF8F5] rounded-xl border border-[#EAE4D9] flex items-start gap-2.5 text-xs text-[#6F7A72]">
             <Info className="w-4 h-4 text-[#8E9B93] shrink-0 mt-0.5" />
             <span className="text-[11px] leading-relaxed">
-              *Rentang biaya di atas adalah angka ilustrasi demo portfolio dan bukan penawaran resmi. Rencana biaya aktual memerlukan evaluasi klinis dan rontgen oleh dokter gigi.
+              *Rentang biaya di atas merupakan estimasi transparan. Rencana biaya aktual akan disesuaikan setelah evaluasi klinis dan rontgen oleh dokter spesialis ortodonti.
             </span>
           </div>
         </section>

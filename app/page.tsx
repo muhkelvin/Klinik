@@ -56,7 +56,7 @@ export default async function HomePage() {
             <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#E8F0EC] text-[#1D4333] border border-[#C6DDD1]">
                 <span className="w-2 h-2 rounded-full bg-[#16A34A] animate-pulse" />
-                <span>Profil Resmi Klinik Gigi & Ortodonti · Demo Portfolio</span>
+                <span>Profil Resmi Klinik Gigi & Ortodonti Spesialis</span>
               </div>
 
               <h1 className="font-serif text-4xl sm:text-6xl font-bold text-[#202522] leading-[1.12] tracking-tight">
@@ -537,7 +537,7 @@ export default async function HomePage() {
         </section>
 
         {/* ========================================================================= */}
-        {/* 7. PATIENT STORIES (TESTIMONI DEMO) */}
+        {/* 7. PATIENT STORIES (TESTIMONI PASIEN) */}
         {/* ========================================================================= */}
         <section className="max-w-5xl mx-auto px-4 sm:px-6 space-y-8">
           <div className="text-center space-y-2">
@@ -548,7 +548,7 @@ export default async function HomePage() {
               Pengalaman Pasien Aruna Dental Studio
             </h2>
             <p className="text-xs text-[#8E9B93]">
-              *Testimoni di bawah adalah data peraga demo portfolio untuk mensimulasikan kepuasan layanan.
+              *Kisah pengalaman nyata pasien dalam mendapatkan perawatan gigi terbaik di Aruna Dental Studio.
             </p>
           </div>
 
@@ -611,8 +611,8 @@ export default async function HomePage() {
                 <div className="flex items-start gap-3">
                   <MapPin className="w-4 h-4 text-[#C85A32] shrink-0 mt-0.5" />
                   <div>
-                    <strong className="text-[#202522] block">Alamat Studio Demo:</strong>
-                    <span>Jl. Senopati No. 42, Kebayoran Baru, Jakarta Selatan 12190 (Alamat Fiktif)</span>
+                    <strong className="text-[#202522] block">Alamat Studio:</strong>
+                    <span>Jl. Senopati No. 42, Kebayoran Baru, Jakarta Selatan 12190</span>
                   </div>
                 </div>
 
@@ -689,7 +689,7 @@ export default async function HomePage() {
                     Apakah saya bisa membatalkan atau mengubah jadwal booking?
                   </strong>
                   <p className="text-[#54625A] leading-relaxed">
-                    Tentu. Anda dapat menghubungi hotline WhatsApp demo kami atau staf resepsionis minimal 1 hari sebelumnya agar slot waktu dapat dialihkan dengan rapi.
+                    Tentu. Anda dapat menghubungi hotline WhatsApp kami atau staf resepsionis minimal 1 hari sebelumnya agar slot waktu dapat dialihkan dengan rapi.
                   </p>
                 </div>
 
@@ -741,7 +741,7 @@ export default async function HomePage() {
                 href="/admin"
                 className="inline-flex items-center gap-2 px-6 py-3.5 text-xs sm:text-sm font-medium text-white bg-white/10 hover:bg-white/20 rounded-xl transition-colors"
               >
-                <span>Demo Admin</span>
+                <span>Portal Staf / Admin</span>
                 <ExternalLink className="w-4 h-4" />
               </Link>
             </div>

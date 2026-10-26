@@ -16,9 +16,9 @@ const serifFont = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: 'Klinik Gigi Aruna Dental Studio — Portfolio Demo',
+  title: 'Aruna Dental Studio — Klinik Gigi & Ortodonti Spesialis',
   description:
-    'Sistem klinik gigi terintegrasi: booking janji temu publik, manajemen jadwal dokter, kontrol berkala, dan simulasi reminder WhatsApp. Demo portfolio fiktif.',
+    'Layanan kesehatan gigi dan ortodonti modern: booking janji temu online, dokter spesialis berpengalaman, behel & aligner, perawatan estetik, dan pengingat jadwal terpadu.',
 };
 
 export default function RootLayout({

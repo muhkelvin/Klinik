@@ -144,7 +144,7 @@ export default async function AdminDashboardPage() {
               Jadwal Appointment Terbaru
             </h2>
             <p className="text-xs text-[#6F7A72]">
-              Booking terbaru yang tercatat di sistem demo secara persisten.
+              Daftar reservasi dan janji temu pasien terbaru yang terdaftar di klinik.
             </p>
           </div>
           <Link
@@ -172,7 +172,7 @@ export default async function AdminDashboardPage() {
               {recentAppointments.length === 0 ? (
                 <tr>
                   <td colSpan={6} className="px-5 py-8 text-center text-xs text-[#8E9B93]">
-                    Belum ada data appointment. Jalankan Reset Data Demo untuk memuat data contoh.
+                    Belum ada data jadwal appointment yang terdaftar.
                   </td>
                 </tr>
               ) : (

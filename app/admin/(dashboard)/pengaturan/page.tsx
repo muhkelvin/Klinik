@@ -2,7 +2,7 @@ import { getDemoCredentialsInfo } from '@/lib/auth';
 import { Settings, Clock, MessageSquare, ShieldAlert, Database } from 'lucide-react';
 
 export const metadata = {
-  title: 'Pengaturan Demo — Aruna Dental Studio',
+  title: 'Pengaturan Sistem — Aruna Dental Studio',
 };
 
 export default function AdminPengaturanPage() {
@@ -12,10 +12,10 @@ export default function AdminPengaturanPage() {
     <div className="space-y-6 max-w-4xl">
       <div>
         <h1 className="font-serif text-2xl font-bold text-[#202522]">
-          Pengaturan Konfigurasi Demo
+          Pengaturan Konfigurasi Sistem
         </h1>
         <p className="text-xs text-[#6B7870] mt-0.5">
-          Parameter operasional yang digunakan dalam simulasi demo sistem klinik gigi.
+          Parameter operasional dan format komunikasi resmi klinik gigi.
         </p>
       </div>
 
@@ -52,14 +52,14 @@ export default function AdminPengaturanPage() {
           <div className="flex items-center gap-2">
             <MessageSquare className="w-4 h-4 text-[#C85A32]" />
             <h2 className="font-serif text-base font-semibold text-[#202522]">
-              Format Pesan WhatsApp (Simulasi)
+              Format Pesan Pengingat WhatsApp
             </h2>
           </div>
           <p className="text-xs text-[#6F7A72]">
-            Template teks otomatis untuk outbox reminder simulasi:
+            Template teks otomatis untuk pesan pengingat jadwal dan kontrol berkala:
           </p>
           <div className="text-[11px] font-mono bg-[#FAF8F5] p-3 rounded-lg border border-[#EAE4D9] text-[#4A554F] leading-relaxed">
-            &quot;Halo Kak [Nama], mengingatkan jadwal konsultasi [Treatment] besok pukul [Waktu] WIB bersama [Dokter]. Mohon konfirmasi kehadirannya. (Demo Portfolio)&quot;
+            &quot;Halo Kak [Nama], mengingatkan jadwal kunjungan [Treatment] besok pukul [Waktu] WIB bersama [Dokter] di Aruna Dental Studio. Mohon konfirmasi kehadirannya.&quot;
           </div>
         </div>
 
@@ -87,20 +87,20 @@ export default function AdminPengaturanPage() {
           </div>
         </div>
 
-        {/* Akun Demo Info */}
+        {/* Akun Admin Info */}
         <div className="bg-white p-5 rounded-xl border border-[#E3DDD1] shadow-2xs space-y-3">
           <div className="flex items-center gap-2">
             <ShieldAlert className="w-4 h-4 text-[#C85A32]" />
             <h2 className="font-serif text-base font-semibold text-[#202522]">
-              Akses Kredensial Demo Admin
+              Akses Akun Administrator
             </h2>
           </div>
           <div className="text-xs text-[#54625A] space-y-1.5 font-mono bg-[#FAF8F5] p-3 rounded-lg border border-[#EAE4D9]">
-            <div>Email Demo: <strong className="text-[#202522]">{creds.email}</strong></div>
-            <div>Sandi Demo: <strong className="text-[#202522]">{creds.password}</strong></div>
+            <div>Email Admin: <strong className="text-[#202522]">{creds.email}</strong></div>
+            <div>Kata Sandi: <strong className="text-[#202522]">{creds.password}</strong></div>
           </div>
           <p className="text-[11px] text-[#7A867E]">
-            Digunakan oleh reviewer portfolio untuk menguji alur operasional klinik.
+            Digunakan oleh tim klinik untuk mengelola jadwal, pasien, dan katalog perawatan.
           </p>
         </div>
       </div>

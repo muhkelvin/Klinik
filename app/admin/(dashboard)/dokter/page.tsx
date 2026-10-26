@@ -17,7 +17,7 @@ export default async function AdminDokterPage() {
           Data Dokter Praktik
         </h1>
         <p className="text-xs text-[#6B7870] mt-0.5">
-          Kelola profil tenaga medis fiktif, spesialisasi, dan status aktif untuk simulasi jadwal booking demo.
+          Kelola profil tenaga medis, spesialisasi, dan jadwal praktik aktif dokter di klinik.
         </p>
       </div>
 

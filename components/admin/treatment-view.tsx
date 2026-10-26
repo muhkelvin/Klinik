@@ -175,7 +175,7 @@ export function TreatmentView({ initialTreatments }: { initialTreatments: Treatm
               </div>
 
               <div>
-                <label className="block font-medium text-[#374151] mb-1">Label Estimasi Biaya (Demo)</label>
+                <label className="block font-medium text-[#374151] mb-1">Label Estimasi Biaya</label>
                 <input
                   type="text"
                   name="price_range_label"

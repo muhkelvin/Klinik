@@ -400,7 +400,7 @@
       "appointment_id": "55555555-5555-5555-5555-555555555501",
       "from_status": "dikonfirmasi",
       "to_status": "selesai",
-      "actor_label": "Admin Demo",
+      "actor_label": "Staf Resepsionis",
       "created_at": "2026-10-27T03:45:00.000Z"
     },
     {
@@ -408,7 +408,7 @@
       "appointment_id": "55555555-5555-5555-5555-555555555502",
       "from_status": "dikonfirmasi",
       "to_status": "datang",
-      "actor_label": "Admin Demo",
+      "actor_label": "Staf Resepsionis",
       "created_at": "2026-10-27T04:00:00.000Z"
     }
   ],
@@ -450,7 +450,7 @@
       "appointment_id": "55555555-5555-5555-5555-555555555503",
       "patient_treatment_id": null,
       "type": "h_minus_1",
-      "message_preview": "Halo Kak Reza Aditya Firmansyah, mengingatkan janji temu Clear Aligner hari ini jam 13:00 WIB bersama Drg. Sarah Wijaya. (Demo Portfolio)",
+      "message_preview": "Halo Kak Reza Aditya Firmansyah, mengingatkan janji temu Clear Aligner hari ini jam 13:00 WIB bersama Drg. Sarah Wijaya di Aruna Dental Studio.",
       "scheduled_at": "2026-10-26T20:04:29.508Z",
       "status": "terkirim_simulasi",
       "created_at": "2026-10-26T22:04:29.508Z"
@@ -460,7 +460,7 @@
       "appointment_id": null,
       "patient_treatment_id": "44444444-4444-4444-4444-444444444401",
       "type": "kontrol",
-      "message_preview": "Halo Kak Dimas Arya Prasetya, waktu kontrol Behel Metal sudah terlewat 5 hari. Silakan ajukan jadwal baru di website. (Demo Portfolio)",
+      "message_preview": "Halo Kak Dimas Arya Prasetya, waktu kontrol Behel Metal Anda telah jatuh tempo. Silakan jadwalkan kunjungan di website kami.",
       "scheduled_at": "2026-10-25T22:04:29.508Z",
       "status": "antre",
       "created_at": "2026-10-26T22:04:29.508Z"

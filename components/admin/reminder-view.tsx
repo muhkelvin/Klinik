@@ -30,10 +30,9 @@ export function ReminderView({ reminders }: { reminders: Reminder[] }) {
       <div className="p-4 bg-[#F8F5EE] rounded-xl border border-[#DFD7C7] flex items-start gap-3">
         <ShieldAlert className="w-5 h-5 text-[#C85A32] shrink-0 mt-0.5" />
         <div className="text-xs text-[#54625A] space-y-1">
-          <strong className="text-[#202522]">Fitur Pengingat Simulasi (Demo Portfolio):</strong>
+          <strong className="text-[#202522]">Layanan Pengingat Otomatis WhatsApp:</strong>
           <p className="leading-relaxed">
-            Halaman ini mensimulasikan antrean pengiriman pesan WhatsApp untuk H-1 janji temu dan pengingat kontrol rutin.
-            Tidak ada pesan nyata yang dikirim ke nomor telepon pasien demi kepatuhan privasi demo.
+            Antrean pengiriman pesan WhatsApp untuk konfirmasi H-1 janji temu dan notifikasi jadwal kontrol berkala pasien. Staf dapat memantau status terkirim dan membatalkan antrean jika diperlukan.
           </p>
         </div>
       </div>

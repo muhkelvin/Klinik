@@ -1,11 +1,11 @@
 import { cookies } from 'next/headers';
 
-const DEMO_EMAIL = process.env.ADMIN_EMAIL || 'admin@klinikdemo.com';
-const DEMO_PASSWORD = process.env.ADMIN_PASSWORD || 'klinikdemo2026';
+const DEFAULT_ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'admin@arunadental.com';
+const DEFAULT_ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'arunadental2026';
 const SESSION_COOKIE_NAME = 'klinik_admin_session';
 
 export async function verifyAdminCredentials(email: string, pass: string): Promise<boolean> {
-  return email.trim().toLowerCase() === DEMO_EMAIL.toLowerCase() && pass === DEMO_PASSWORD;
+  return email.trim().toLowerCase() === DEFAULT_ADMIN_EMAIL.toLowerCase() && pass === DEFAULT_ADMIN_PASSWORD;
 }
 
 export async function setAdminSession() {
@@ -32,7 +32,7 @@ export async function getAdminSession(): Promise<boolean> {
 
 export function getDemoCredentialsInfo() {
   return {
-    email: DEMO_EMAIL,
-    password: DEMO_PASSWORD,
+    email: DEFAULT_ADMIN_EMAIL,
+    password: DEFAULT_ADMIN_PASSWORD,
   };
 }

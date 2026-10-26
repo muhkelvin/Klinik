@@ -36,10 +36,10 @@ export function BookingSuccessView() {
 
       <div className="space-y-2">
         <h1 className="font-serif text-2xl sm:text-3xl font-bold text-[#202522]">
-          Permintaan Booking Berhasil Disimpan!
+          Permintaan Booking Berhasil Terdaftar!
         </h1>
         <p className="text-xs sm:text-sm text-[#616E65] leading-relaxed">
-          Data kunjungan telah masuk ke dalam sistem demo kami dan sudah dapat langsung ditinjau oleh tim staf.
+          Data kunjungan telah masuk ke sistem kami dan sedang diproses oleh staf resepsionis Aruna Dental Studio.
         </p>
       </div>
 
@@ -47,7 +47,7 @@ export function BookingSuccessView() {
       {summary ? (
         <div className="p-4 bg-[#FAF8F5] rounded-xl border border-[#EAE4D9] text-left text-xs space-y-2.5">
           <div className="flex justify-between border-b border-[#E3DDD1] pb-2">
-            <span className="text-[#6F7A72]">Nama Pemesan:</span>
+            <span className="text-[#6F7A72]">Nama Pasien:</span>
             <strong className="text-[#202522]">{summary.patientName}</strong>
           </div>
           <div className="flex justify-between border-b border-[#E3DDD1] pb-2">
@@ -55,7 +55,7 @@ export function BookingSuccessView() {
             <strong className="text-[#202522]">{summary.treatmentName}</strong>
           </div>
           <div className="flex justify-between border-b border-[#E3DDD1] pb-2">
-            <span className="text-[#6F7A72]">Dokter:</span>
+            <span className="text-[#6F7A72]">Dokter Spesialis:</span>
             <strong className="text-[#202522]">{summary.doctorName}</strong>
           </div>
           <div className="flex justify-between">
@@ -67,32 +67,32 @@ export function BookingSuccessView() {
         </div>
       ) : (
         <div className="p-4 bg-[#FAF8F5] rounded-xl border border-[#EAE4D9] text-xs text-[#6F7A72]">
-          Jadwal reservasi Anda telah berhasil terdaftar pada sistem demo.
+          Jadwal reservasi Anda telah berhasil terdaftar pada sistem klinik.
         </div>
       )}
 
-      {/* Demo Notice Alert */}
+      {/* Next Step Info */}
       <div className="p-3.5 bg-[#F8F5EE] rounded-xl border border-[#DFD7C7] text-left flex items-start gap-2.5 text-xs text-[#54625A]">
-        <ShieldAlert className="w-4 h-4 text-[#C85A32] shrink-0 mt-0.5" />
+        <Sparkles className="w-4 h-4 text-[#C85A32] shrink-0 mt-0.5" />
         <div className="leading-relaxed text-[11px]">
-          <strong>Catatan Simulasi Demo:</strong> Karena ini adalah aplikasi demo portfolio, Anda tidak akan menerima pesan WhatsApp sungguhan. Anda dapat membuka <strong>Dashboard Admin Demo</strong> untuk melihat booking baru ini dan menguji alur konfirmasi staf.
+          <strong>Langkah Selanjutnya:</strong> Staf resepsionis kami akan mengirimkan konfirmasi jadwal dan panduan persiapan kedatangan melalui pesan WhatsApp ke nomor yang Anda daftarkan.
         </div>
       </div>
 
       {/* Actions */}
       <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
         <Link
-          href="/admin/jadwal"
-          className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-5 py-2.5 text-xs font-medium text-white bg-[#C85A32] hover:bg-[#B44E28] rounded-xl transition-colors shadow-2xs"
-        >
-          <span>Lihat Booking di Admin Demo</span>
-          <ArrowRight className="w-3.5 h-3.5" />
-        </Link>
-        <Link
           href="/"
-          className="w-full sm:w-auto inline-flex items-center justify-center px-5 py-2.5 text-xs font-medium text-[#202522] bg-[#FAF8F5] border border-[#DFD8C9] hover:bg-[#EAE4D9] rounded-xl transition-colors"
+          className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-2.5 text-xs font-medium text-white bg-[#C85A32] hover:bg-[#B44E28] rounded-xl transition-colors shadow-2xs"
         >
           Kembali ke Beranda
+        </Link>
+        <Link
+          href="/admin/jadwal"
+          className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-5 py-2.5 text-xs font-medium text-[#202522] bg-[#FAF8F5] border border-[#DFD8C9] hover:bg-[#EAE4D9] rounded-xl transition-colors"
+        >
+          <span>Portal Kelola Jadwal</span>
+          <ArrowRight className="w-3.5 h-3.5" />
         </Link>
       </div>
     </div>

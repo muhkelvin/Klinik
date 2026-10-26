@@ -219,7 +219,7 @@ export async function resetDemoData() {
       appointment_id: null,
       patient_treatment_id: patientTreatments[0].id,
       type: 'kontrol',
-      message_preview: `Halo Kak ${patients[0].name}, sudah waktunya kontrol berkala Behel Metal (terlambat 5 hari). Silakan jadwalkan kunjungan Anda kembali melalui website kami. (Demo Portfolio)`,
+      message_preview: `Halo Kak ${patients[0].name}, sudah waktunya kontrol berkala Behel Metal (terlambat 5 hari). Silakan jadwalkan kunjungan Anda kembali melalui website kami.`,
       scheduled_at: new Date(now.getTime() - 86400000).toISOString(),
       status: 'antre',
     },
@@ -228,7 +228,7 @@ export async function resetDemoData() {
       appointment_id: null,
       patient_treatment_id: patientTreatments[2].id,
       type: 'kontrol',
-      message_preview: `Halo Kak ${patients[5].name}, mengingatkan jadwal kontrol Clear Aligner dalam 2 hari ke depan bersama Drg. Sarah Wijaya. (Demo Portfolio)`,
+      message_preview: `Halo Kak ${patients[5].name}, mengingatkan jadwal kontrol Clear Aligner dalam 2 hari ke depan bersama Drg. Sarah Wijaya di Aruna Dental Studio.`,
       scheduled_at: new Date(now.getTime() + 86400000).toISOString(),
       status: 'antre',
     },
@@ -236,5 +236,5 @@ export async function resetDemoData() {
 
   await supabase.from('reminders').insert(reminders);
 
-  return { success: true, message: 'Data demo berhasil direset' };
+  return { success: true, message: 'Data operasional berhasil disinkronkan ke kondisi awal.' };
 }

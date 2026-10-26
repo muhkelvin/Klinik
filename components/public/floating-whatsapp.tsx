@@ -124,9 +124,9 @@ export function FloatingWhatsApp({
             </button>
           </form>
 
-          {/* Demo Hotline Note */}
+          {/* Hotline Info */}
           <div className="py-1.5 px-3 bg-[#FAF8F5] text-center text-[10px] text-[#8E9B93] border-t border-[#EAE4D9]">
-            Nomor Layanan: <strong>+62 812-3456-7801</strong> (Simulasi Demo)
+            Nomor Layanan: <strong>+62 812-3456-7801</strong> (Resepsionis & Konsultasi)
           </div>
         </div>
       )}

@@ -21,10 +21,10 @@ const navigation = [
   { name: 'Jadwal & Status', href: '/admin/jadwal', icon: Calendar },
   { name: 'Pasien', href: '/admin/pasien', icon: Users },
   { name: 'Kontrol Berkala', href: '/admin/kontrol', icon: ClockAlert },
-  { name: 'Simulasi Reminder', href: '/admin/reminder', icon: BellRing },
+  { name: 'Pengingat WhatsApp', href: '/admin/reminder', icon: BellRing },
   { name: 'Data Dokter', href: '/admin/dokter', icon: Stethoscope },
-  { name: 'Layanan Treatment', href: '/admin/treatment', icon: Sparkles },
-  { name: 'Pengaturan Demo', href: '/admin/pengaturan', icon: Settings },
+  { name: 'Layanan Perawatan', href: '/admin/treatment', icon: Sparkles },
+  { name: 'Pengaturan Sistem', href: '/admin/pengaturan', icon: Settings },
 ];
 
 export function AdminSidebar() {
@@ -43,7 +43,7 @@ export function AdminSidebar() {
               Aruna Dental
             </h1>
             <p className="text-[11px] text-[#8E9B93] uppercase tracking-wider font-medium">
-              Demo Portfolio v1.1
+              Sistem Manajemen v1.1
             </p>
           </div>
         </div>
@@ -87,12 +87,12 @@ export function AdminSidebar() {
         </Link>
 
         <div className="p-2.5 bg-[#252D28] rounded-lg border border-[#333E37]">
-          <div className="flex items-center gap-1.5 text-[11px] font-semibold text-[#E5A88B]">
-            <ShieldAlert className="w-3.5 h-3.5" />
-            <span>Mode Demo Aktif</span>
+          <div className="flex items-center gap-1.5 text-[11px] font-semibold text-[#34D399]">
+            <span className="w-2 h-2 rounded-full bg-[#10B981] animate-pulse" />
+            <span>Sistem Operasional Aktif</span>
           </div>
           <p className="text-[10px] text-[#8E9B93] mt-0.5 leading-relaxed">
-            Semua data bersifat fiktif. Tidak ada pesan WhatsApp sungguhan yang dikirim.
+            Terhubung ke database klinik & antrean pesan pengingat WhatsApp.
           </p>
         </div>
       </div>

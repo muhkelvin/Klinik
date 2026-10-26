@@ -49,7 +49,7 @@ export function BookingForm({
   const [name, setName] = useState('');
   const [whatsapp, setWhatsapp] = useState('');
   const [notes, setNotes] = useState('');
-  const [demoConsent, setDemoConsent] = useState(true);
+  const [consentAgreed, setConsentAgreed] = useState(true);
   const [errorMsg, setErrorMsg] = useState('');
 
   const selectedTreatment = treatments.find((t) => t.id === selectedTreatmentId);
@@ -58,8 +58,8 @@ export function BookingForm({
     e.preventDefault();
     setErrorMsg('');
 
-    if (!demoConsent) {
-      setErrorMsg('Persetujuan demo wajib dicentang untuk melanjutkan.');
+    if (!consentAgreed) {
+      setErrorMsg('Mohon centang persetujuan informasi untuk melanjutkan.');
       return;
     }
 
@@ -250,22 +250,22 @@ export function BookingForm({
             rows={2}
             value={notes}
             onChange={(e) => setNotes(e.target.value)}
-            placeholder="Catatan umum atau jadwal preferensi. Mohon JANGAN mengirimkan informasi medis sensitif."
+            placeholder="Catatan umum atau preferensi jadwal (misal: lebih nyaman di ruang tenang)."
             className="w-full px-3.5 py-2 text-xs bg-[#FAF8F5] border border-[#D5CDC0] rounded-xl focus:outline-hidden focus:ring-2 focus:ring-[#C85A32]"
           />
         </div>
 
-        {/* Demo Consent */}
+        {/* Patient Consent */}
         <div className="p-3.5 bg-[#FAF8F5] rounded-xl border border-[#EAE4D9] flex items-start gap-3">
           <input
             type="checkbox"
             id="consent_check"
-            checked={demoConsent}
-            onChange={(e) => setDemoConsent(e.target.checked)}
+            checked={consentAgreed}
+            onChange={(e) => setConsentAgreed(e.target.checked)}
             className="mt-0.5 rounded text-[#C85A32] focus:ring-[#C85A32]"
           />
           <label htmlFor="consent_check" className="text-xs text-[#54625A] leading-relaxed select-none">
-            Saya memahami bahwa formulir ini adalah <strong>demo interaktif portfolio</strong>. Data yang dikirimkan akan tersimpan di sistem demo untuk simulasi operasional admin, dan tidak ada pesan WhatsApp atau janji temu medis sungguhan yang dibuat.
+            Saya mengonfirmasi bahwa data kontak di atas sudah benar dan bersedia menerima konfirmasi jadwal serta pengingat kunjungan via WhatsApp dari tim Aruna Dental Studio.
           </label>
         </div>
       </div>

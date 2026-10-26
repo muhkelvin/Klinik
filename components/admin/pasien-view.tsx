@@ -30,7 +30,7 @@ export function PasienView({ initialPatients, initialSearch }: PasienViewProps) 
 
   function handleDelete(id: string, name: string) {
     const confirmed = window.confirm(
-      `Apakah Anda yakin ingin menghapus data pasien demo "${name}"?`
+      `Apakah Anda yakin ingin menghapus data pasien "${name}"?`
     );
     if (!confirmed) return;
 

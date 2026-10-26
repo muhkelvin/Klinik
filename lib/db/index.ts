@@ -269,7 +269,7 @@ function getInitialLocalData(): LocalDB {
       ends_at: new Date(new Date().setHours(14, 45, 0, 0)).toISOString(),
       status: 'dijadwalkan',
       source: 'treatment_behel',
-      notes: 'Permintaan booking demo',
+      notes: 'Permintaan booking via website',
       created_at: now.toISOString(),
       updated_at: now.toISOString(),
     },
@@ -281,7 +281,7 @@ function getInitialLocalData(): LocalDB {
       appointment_id: appointments[0].id,
       from_status: 'dikonfirmasi',
       to_status: 'selesai',
-      actor_label: 'Admin Demo',
+      actor_label: 'Staf Resepsionis',
       created_at: new Date(new Date().setHours(10, 45, 0, 0)).toISOString(),
     },
     {
@@ -289,7 +289,7 @@ function getInitialLocalData(): LocalDB {
       appointment_id: appointments[1].id,
       from_status: 'dikonfirmasi',
       to_status: 'datang',
-      actor_label: 'Admin Demo',
+      actor_label: 'Staf Resepsionis',
       created_at: new Date(new Date().setHours(11, 0, 0, 0)).toISOString(),
     },
   ];
@@ -300,7 +300,7 @@ function getInitialLocalData(): LocalDB {
       appointment_id: appointments[2].id,
       patient_treatment_id: null,
       type: 'h_minus_1',
-      message_preview: `Halo Kak ${patients[2].name}, mengingatkan janji temu Clear Aligner hari ini jam 13:00 WIB bersama Drg. Sarah Wijaya. (Demo Portfolio)`,
+      message_preview: `Halo Kak ${patients[2].name}, mengingatkan janji temu Clear Aligner hari ini jam 13:00 WIB bersama Drg. Sarah Wijaya di Aruna Dental Studio.`,
       scheduled_at: new Date(now.getTime() - 2 * 3600000).toISOString(),
       status: 'terkirim_simulasi',
       created_at: now.toISOString(),
@@ -310,7 +310,7 @@ function getInitialLocalData(): LocalDB {
       appointment_id: null,
       patient_treatment_id: patient_treatments[0].id,
       type: 'kontrol',
-      message_preview: `Halo Kak ${patients[0].name}, waktu kontrol Behel Metal sudah terlewat 5 hari. Silakan ajukan jadwal baru di website. (Demo Portfolio)`,
+      message_preview: `Halo Kak ${patients[0].name}, waktu kontrol Behel Metal Anda telah jatuh tempo. Silakan jadwalkan kunjungan di website kami.`,
       scheduled_at: new Date(now.getTime() - 86400000).toISOString(),
       status: 'antre',
       created_at: now.toISOString(),
@@ -733,7 +733,7 @@ export async function createAppointment(data: {
 export async function updateAppointmentStatus(
   id: string,
   newStatus: AppointmentStatus,
-  actorLabel = 'Admin Demo'
+  actorLabel = 'Staf Klinik'
 ): Promise<Appointment> {
   let prevStatus: string | null = null;
 
@@ -1028,5 +1028,5 @@ export async function getDashboardMetrics() {
 export async function resetDatabaseToSeed() {
   const initial = getInitialLocalData();
   writeLocalDB(initial);
-  return { success: true, message: 'Data demo lokal berhasil direset ke seed deterministik.' };
+  return { success: true, message: 'Data operasional lokal berhasil disinkronkan ke kondisi awal.' };
 }

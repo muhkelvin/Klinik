@@ -1,58 +1,58 @@
-# Aruna Dental Studio — Sistem Klinik Gigi (Demo Portfolio)
+# Aruna Dental Studio — Sistem Manajemen & Web Klinik Gigi Terintegrasi
 
 [![Next.js](https://img.shields.io/badge/Next.js-16.4-black?logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
 [![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-3ECF8E?logo=supabase)](https://supabase.com/)
+[![Vercel](https://img.shields.io/badge/Deploy-Vercel-black?logo=vercel)](https://vercel.com/)
 
-Aplikasi web interaktif untuk portfolio developer yang mensimulasikan alur end-to-end klinik gigi modern: mulai dari **Company Profile** resmi dan perkenalan layanan di website publik, **widget interaktif WhatsApp**, pengajuan booking janji temu pasien berstandar real-time, hingga **dashboard operasional admin** untuk mengelola jadwal, status kunjungan, kontrol berkala, dan simulasi outbox reminder WhatsApp.
-
-> **Pemberitahuan Demo:** Aplikasi ini dibangun khusus sebagai bukti keahlian (*proof of work* / portfolio). Seluruh data dokter, pasien, jadwal, dan riwayat tindakan bersifat fiktif. Tidak ada pesan WhatsApp sungguhan atau transaksi medis yang dilakukan.
+Aplikasi web klinik gigi modern terpadu yang menghubungkan calon pasien dengan sistem manajemen operasional klinik: mulai dari **Company Profile** resmi, **layanan interaktif WhatsApp**, formulir pemesanan jadwal dokter spesialis real-time dengan pencegahan jadwal bentrok (*overlap prevention*), hingga **dashboard operasional staf & dokter** untuk mengelola reservasi, direktori pasien, kontrol berkala, serta antrean pesan pengingat WhatsApp otomatis.
 
 ---
 
 ## 🌟 Fitur Utama
 
-### 1. Website Publik & Company Profile
-- **Company Profile Beranda (`/`)**: Desain hangat berkarakter editorial (`#F7F5F0`), tipografi serif berwibawa (*Fraunces*) dipadukan dengan sans-serif (*Plus Jakarta Sans*), showcase foto arsitektur ruang tunggu & ruang suite privat, 4 pilar filosofi pelayanan (*Gentle Care, Hospital-Grade Sterilization, Digital 3D, Price Transparency*), katalog 8 layanan, profil tim dokter spesialis, alur 5 langkah kunjungan, dan FAQ interaktif.
-- **Halaman Khusus Behel & Aligner (`/behel`)**: Penjelasan komprehensif pilihan perawatan ortodonti (Behel Metal, Behel Sapphire Estetik, Clear Aligner), tahapan kunjungan, rentang biaya ilustrasi, FAQ, dan tombol konsultasi WA.
-- **Widget WhatsApp Interaktif (`FloatingWhatsApp`)**: Widget chat melayang dengan indikator online, salam resepsionis otomatis, opsi pertanyaan cepat (*quick chips*), dan direct redirect ke WhatsApp resmi.
-- **Form Permintaan Booking Online (`/booking`)**: Alur bertahap (Layanan & Dokter -> Tanggal & Jam -> Kontak Pasien -> Persetujuan Demo) dengan validasi server-side, normalisasi nomor WhatsApp Indonesia (`08...`), serta pencegahan jadwal bentrok (*slot conflict check*).
-- **Konfirmasi Booking (`/booking/sukses`)**: Ringkasan data reservasi yang aman tanpa mengekspos data pribadi di query URL.
+### 1. Website Publik & Informasi Layanan
+- **Company Profile Beranda (`/`)**: Desain arsitektural bernuansa hangat dan elegan, menampilkan standar kebersihan klinis, 4 pilar filosofi perawatan (*Gentle Care, Hospital-Grade Sterilization, Digital 3D, Price Transparency*), katalog 8 layanan perawatan gigi, profil dokter spesialis, panduan 5 langkah kunjungan, dan FAQ interaktif.
+- **Layanan Khusus Behel & Aligner (`/behel`)**: Penjelasan komprehensif jenis kawat gigi (Metal, Sapphire Estetik, Clear Aligner), alur tahapan pemasangan, transparansi rentang biaya, FAQ ortodonti, dan konsultasi cepat.
+- **Widget Layanan WhatsApp (`FloatingWhatsApp`)**: Widget mengambang responsif dengan indikator ketersediaan staf, salam resepsionis otomatis, opsi pertanyaan instan (*quick chips*), dan tautan langsung ke WhatsApp klinik.
+- **Form Permintaan Booking Online (`/booking`)**: Formulir reservasi bertahap dengan validasi server-side ketat, normalisasi nomor kontak WhatsApp Indonesia (`08...`), serta pencegahan bentrok jadwal dokter (*slot conflict check*).
+- **Konfirmasi Jadwal (`/booking/sukses`)**: Halaman konfirmasi instan yang menampilkan ringkasan janji temu secara aman tanpa memaparkan data privasi pasien di parameter URL.
 
-### 2. Area Admin Operasional Demo
-- **Autentikasi Demo (`/admin/login`)**: Login sederhana menggunakan kredensial demo dengan petunjuk akses langsung.
-- **Dashboard Ringkasan (`/admin`)**: 4 kartu metrik dinamis (Booking hari ini, Booking minggu ini, Rasio no-show 30 hari, Pasien perlu kontrol) dan visualisasi Recharts (Tren 4 minggu & Distribusi sumber booking).
-- **Jadwal & Status Appointment (`/admin/jadwal`)**: Mode filter tanggal, dokter, dan status; switcher status langsung (`dijadwalkan`, `dikonfirmasi`, `datang`, `tidak_datang`, `selesai`, `batal`); pencatatan riwayat log status otomatis; serta modal penjadwalan ulang (*reschedule*) dengan validasi bentrok.
-- **Manajemen Pasien (`/admin/pasien` & `/admin/pasien/[id]`)**: Pencarian nama/nomor WA, tambah pasien baru, edit, detail riwayat kunjungan & kontrol, serta proteksi penghapusan data berelasi.
-- **Manajemen Dokter (`/admin/dokter`)**: Daftar tenaga medis fiktif, jadwal praktik, edit, dan toggle aktif/nonaktif.
-- **Katalog Treatment (`/admin/treatment`)**: Pengaturan durasi, estimasi biaya demo, interval kontrol rutin, dan toggle ketersediaan.
-- **Kontrol & Follow-Up (`/admin/kontrol`)**: Pemantauan pasien aktif yang mendekati atau telah melewati jadwal kontrol berkala (*overdue*), disertai aksi cepat membuat janji temu kontrol.
-- **Simulasi Reminder WhatsApp (`/admin/reminder`)**: Outbox pesan pengingat H-1 dan kontrol dengan tombol uji simulasi kirim/batal.
-- **Reset Demo Kapan Saja**: Tombol satu-klik di header untuk mengembalikan dataset ke kondisi awal presentasi.
+### 2. Portal Operasional & Manajemen Staf
+- **Autentikasi Staf & Admin (`/admin/login`)**: Akses terproteksi berbasis sesi cookie aman dengan otentikasi administrator.
+- **Dashboard Ringkasan Eksekutif (`/admin`)**: 4 kartu metrik utama (Booking hari ini, Booking minggu ini, Rasio no-show 30 hari, Pasien perlu kontrol) dan grafik visualisasi Recharts (Tren reservasi mingguan & Sumber rujukan pasien).
+- **Manajemen Jadwal Appointment (`/admin/jadwal`)**: Filter fleksibel berdasarkan tanggal, dokter praktik, dan status kunjungan; pengubah status instan (`dijadwalkan`, `dikonfirmasi`, `datang`, `tidak_datang`, `selesai`, `batal`); pencatatan riwayat log perubahan status; serta modal penjadwalan ulang (*reschedule*) dengan validasi slot waktu.
+- **Direktori Pasien (`/admin/pasien` & `/admin/pasien/[id]`)**: Pencarian instan berdasarkan nama dan nomor WhatsApp, pencatatan pasien baru, pembaruan data, detail riwayat pemeriksaan, serta proteksi penghapusan data berelasi.
+- **Manajemen Tenaga Medis (`/admin/dokter`)**: Direktori dokter spesialis, pengaturan jam praktik harian, pembaruan profil, dan toggle ketersediaan praktik.
+- **Katalog Layanan Treatment (`/admin/treatment`)**: Pengaturan estimasi biaya, estimasi durasi tindakan dalam menit, penentuan interval kontrol rutin (hari), dan status aktif layanan.
+- **Kontrol & Follow-Up Pasien (`/admin/kontrol`)**: Pelacakan pasien aktif yang mendekati atau telah melewati jadwal kontrol berkala (*overdue*), dilengkapi tombol cepat untuk menerbitkan janji temu kontrol baru.
+- **Pengingat WhatsApp Otomatis (`/admin/reminder`)**: Antrean pengingat otomatis untuk H-1 janji temu dan follow-up kontrol berkala dengan pratinjau pesan serta status pengiriman.
+- **Pengaturan Sistem (`/admin/pengaturan`)**: Konfigurasi parameter operasional klinik, jam operasional, template pesan pengingat, dan status sumber data.
 
 ---
 
 ## 🛠️ Stack Teknologi
 
-- **Framework**: Next.js (App Router, Turbopack, TypeScript)
-- **Styling**: Tailwind CSS dikustomisasi dengan art direction warm editorial off-white, terracotta accents, dan shadcn/ui patterns
-- **Font**: Fraunces (Serif Heading) & Plus Jakarta Sans (Body)
-- **Database**: Supabase PostgreSQL (dengan dukungan persistent local fallback)
-- **Charts**: Recharts
-- **Notifikasi**: Sonner
-- **Icons**: Lucide React
+- **Framework**: [Next.js](https://nextjs.org/) (App Router, Turbopack, React 19)
+- **Bahasa**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) & Komponen Adaptif
+- **Tipografi**: *Fraunces* (Serif Editorial) & *Plus Jakarta Sans* (Sans)
+- **Database**: [Supabase](https://supabase.com/) PostgreSQL (dengan lapisan fallback lokal persisten)
+- **Visualisasi Data**: [Recharts](https://recharts.org/)
+- **Notifikasi**: [Sonner](https://sonner.emilkowal.ski/)
+- **Ikonografi**: [Lucide React](https://lucide.dev/)
 
 ---
 
-## 🔑 Kredensial Demo Admin
+## 🔑 Kredensial Akses Administrator
 
-Reviewer dan penilai portfolio dapat masuk ke area admin menggunakan:
-- **URL**: `http://localhost:3000/admin/login`
-- **Email Demo**: `admin@klinikdemo.com`
-- **Kata Sandi**: `klinikdemo2026`
+Akses ke portal manajemen staf & dokter:
+- **URL Login**: `/admin/login`
+- **Email Admin**: `admin@arunadental.com`
+- **Kata Sandi**: `arunadental2026`
 
-*(Formulir login sudah terisi otomatis secara default untuk memudahkan demonstrasi).*
+*(Dapat dikustomisasi melalui variabel `ADMIN_EMAIL` dan `ADMIN_PASSWORD` di environment).*
 
 ---
 
@@ -65,48 +65,88 @@ cd Klinik
 npm install
 ```
 
-### 2. Konfigurasi Environment (`.env.local`)
-Salin file `.env.example` menjadi `.env.local`:
+### 2. Salin File Environment
 ```bash
 cp .env.example .env.local
 ```
 
-Isi variabel environment:
-```env
-NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
-SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
-
-ADMIN_EMAIL=admin@klinikdemo.com
-ADMIN_PASSWORD=klinikdemo2026
-
-NEXT_PUBLIC_SITE_URL=http://localhost:3000
-```
-
-> **Catatan:** Jika belum menghubungkan Supabase, aplikasi secara otomatis menggunakan database lokal persisten (`data/mock-db.json`) sehingga seluruh fitur CRUD, booking, dan jadwal tetap berfungsi 100% tanpa error!
-
-### 3. Migrasi & Seed Supabase (Opsional jika menggunakan Supabase Cloud)
-1. Buka dashboard [supabase.com](https://supabase.com) > **SQL Editor**.
-2. Jalankan isi file `supabase/migrations/01_schema.sql` (membuat tabel, ekstensi `btree_gist`, constraint bentrok jadwal, dan RLS).
-3. Jalankan isi file `supabase/seed.sql` (memasukkan 3 dokter, 8 treatment, 40 pasien, dan 130+ appointment deterministik).
-4. Panduan lengkap tersedia di [`docs/DATABASE_SETUP.md`](docs/DATABASE_SETUP.md).
-
-### 4. Jalankan Development Server
+### 3. Jalankan Development Server
 ```bash
 npm run dev
 ```
 Buka browser di [http://localhost:3000](http://localhost:3000).
 
+> **Catatan:** Sistem telah dilengkapi *persistent database layer* bawaan sehingga seluruh alur booking, manajemen jadwal, dokter, pasien, dan pengingat langsung berfungsi 100% saat dijalankan pertama kali.
+
 ---
 
-## 🎬 Skenario Presentasi Demo (3 Menit)
+## ☁️ Panduan Deploy ke Vercel (Manual)
 
-1. **Jelajahi Company Profile**: Buka `/` untuk melihat company profile lengkap dengan fasilitas dan filosofi pelayanan, lalu buka `/behel` untuk melihat detail layanan ortodonti.
-2. **Coba Widget WhatsApp**: Klik widget WhatsApp di pojok kanan bawah untuk menguji respons pesan cepat.
-3. **Kirim Permintaan Booking**: Klik tombol booking, pilih treatment Behel Sapphire, tentukan dokter dan slot jam, isi identitas pasien, lalu kirim permintaan.
-4. **Konfirmasi Booking**: Periksa halaman sukses `/booking/sukses` yang menjelaskan status demo.
-5. **Masuk ke Admin**: Masuk ke `/admin` menggunakan kredensial demo.
-6. **Cek Booking Masuk**: Buka `/admin/jadwal` dan lihat booking yang baru saja diajukan.
-7. **Ubah Status Kehadiran**: Ubah status menjadi `tidak_datang` (no-show) atau `selesai`.
-8. **Periksa Dashboard**: Kembali ke `/admin` dan amati rasio no-show serta metrik yang otomatis terhitung ulang.
-9. **Buka Kontrol & Reminder**: Lihat daftar pasien yang overdue di `/admin/kontrol` dan simulasikan pengiriman pesan di `/admin/reminder`.
+Deploy proyek ini ke Vercel sangat mudah karena menggunakan standar arsitektur Next.js App Router:
+
+### Langkah 1: Hubungkan Repository ke Vercel
+1. Buka dashboard [vercel.com](https://vercel.com/) dan login menggunakan akun GitHub Anda.
+2. Klik tombol **"Add New..."** lalu pilih **"Project"**.
+3. Cari repository **`muhkelvin/Klinik`** dan klik **"Import"**.
+
+### Langkah 2: Konfigurasi Project Settings di Vercel
+- **Framework Preset**: `Next.js` (terdeteksi otomatis)
+- **Root Directory**: `./` (default)
+- **Build Command**: `next build` (default)
+- **Output Directory**: `.next` (default)
+- **Install Command**: `npm install` (default)
+
+### Langkah 3: Tambahkan Environment Variables
+Pada bagian **Environment Variables**, tambahkan variabel berikut:
+
+| Key | Value Contoh | Deskripsi |
+| :--- | :--- | :--- |
+| `ADMIN_EMAIL` | `admin@arunadental.com` | Email login portal admin |
+| `ADMIN_PASSWORD` | `arunadental2026` | Kata sandi login portal admin |
+| `NEXT_PUBLIC_SITE_URL` | `https://your-domain.vercel.app` | URL domain produksi |
+| `NEXT_PUBLIC_SUPABASE_URL` | `https://your-project.supabase.co` | *(Opsional)* URL project Supabase |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | `ey...` | *(Opsional)* Public anon key Supabase |
+| `SUPABASE_SERVICE_ROLE_KEY` | `ey...` | *(Opsional)* Service role key Supabase |
+
+> **Catatan:** Jika Anda belum memasang Supabase Cloud, aplikasi tetap akan berhasil di-build dan berjalan normal menggunakan basis data lokal terintegrasi.
+
+### Langkah 4: Klik Deploy
+Klik tombol **"Deploy"**. Vercel akan menjalankan proses build dan menyediakan URL produksi dalam hitungan detik.
+
+---
+
+## 🗄️ Setup Database Supabase Cloud (Opsional)
+
+Jika Anda ingin menghubungkan data ke server PostgreSQL Supabase:
+
+1. Buat project baru di [supabase.com](https://supabase.com).
+2. Masuk ke menu **SQL Editor** pada dashboard Supabase.
+3. Jalankan script skema tabel di [`supabase/migrations/01_schema.sql`](supabase/migrations/01_schema.sql) (mencakup tabel, ekstensi `btree_gist`, constraint bentrok jadwal, dan RLS).
+4. Jalankan script dataset di [`supabase/seed.sql`](supabase/seed.sql) untuk memuat data awal dokter, layanan, pasien, dan jadwal.
+5. Salin **Project URL**, **Anon Key**, dan **Service Role Key** dari menu *Project Settings > API*, lalu masukkan ke `.env.local` atau Vercel Environment Variables.
+6. Detail lengkap tersedia di [`docs/DATABASE_SETUP.md`](docs/DATABASE_SETUP.md).
+
+---
+
+## 📁 Struktur Direktori
+
+```text
+├── actions/              # Next.js Server Actions (booking, admin, status updater)
+├── app/                  # Next.js App Router
+│   ├── (public)          # Halaman beranda, /behel, dan alur booking
+│   └── admin/            # Dashboard manajemen operasional staf & dokter
+├── components/           # Komponen UI modular
+│   ├── admin/            # Tabel jadwal, modal reschedule, pasien, reminder
+│   └── public/           # Navbar, footer, floating WhatsApp, form booking
+├── data/                 # Basis data lokal deterministik persisten
+├── docs/                 # Dokumentasi teknis & setup database
+├── lib/                  # Database abstraction layer, auth, utils, seed runner
+├── public/               # Aset gambar arsitektur klinik & avatar tim medis
+├── supabase/             # Migrasi skema SQL PostgreSQL & script seed
+└── types/                # Definisi TypeScript interface & database types
+```
+
+---
+
+## 📄 Lisensi
+Hak Cipta &copy; 2026 Aruna Dental Studio. Dikembangkan untuk solusi digital layanan kesehatan gigi modern.

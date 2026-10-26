@@ -73,7 +73,7 @@ export function PublicNavbar() {
             href="/admin"
             className="hidden lg:inline-flex items-center gap-1 text-xs font-medium text-[#6F7A72] hover:text-[#202522] px-3 py-1.5 rounded-lg hover:bg-[#EAE4D9] transition-colors"
           >
-            <span>Demo Admin</span>
+            <span>Portal Admin</span>
             <ArrowUpRight className="w-3.5 h-3.5" />
           </Link>
 
